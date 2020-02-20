@@ -17,8 +17,7 @@ public class Clases : MonoBehaviour
     public float D2;
     void Start()
     {
-        //F1 = gameObject.GetComponent<Rigidbody>();
-        //F2 = gameObject.GetComponent<Rigidbody>();
+       
 
     }
 
@@ -32,11 +31,10 @@ public class Clases : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.Space))
-        {
+        
         Formula(F1, F2, D1);
 
-        }
+        
 
         Debug.Log(D2);
         
