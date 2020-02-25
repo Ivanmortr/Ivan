@@ -19,7 +19,10 @@ public class ClasePractica3 : MonoBehaviour
     void Update()
     {
 
-
+        if(Input.GetKey(KeyCode.Space))
+        {
+            AplicarFuerza(Fuerza);
+        }
 
     } 
 
@@ -27,7 +30,7 @@ public class ClasePractica3 : MonoBehaviour
     {
         fuerza = Fuerza;
 
-        Objetin.AddForce(transform.right * fuerza, ForceMode.Impulse);
+        Objetin.AddForce(transform.up * fuerza, ForceMode.Force);
 
         float trabajo = fuerza * 12;
 
