@@ -1,0 +1,36 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ClasePractica3 : MonoBehaviour
+{
+    // Start is called before the first frame update
+
+    public Rigidbody Objetin;
+    public float Fuerza;
+    void Start()
+    {
+        Objetin = gameObject.GetComponent<Rigidbody>();
+
+        AplicarFuerza(Fuerza);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+
+
+    } 
+
+    public void AplicarFuerza(float fuerza)
+    {
+        fuerza = Fuerza;
+
+        Objetin.AddForce(transform.right * fuerza, ForceMode.Impulse);
+
+        float trabajo = fuerza * 12;
+
+        Debug.Log(trabajo);
+    }
+}
