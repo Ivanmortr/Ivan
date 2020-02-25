@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClasePractica4s : MonoBehaviour
+public class ClasesPractica4 : MonoBehaviour
 {
     // Start is called before the first frame update
 
     public Rigidbody Objetin;
     public float Fuerza;
+
+    [SerializeField]
+    float gravedad;
+    
     void Start()
     {
         Objetin = gameObject.GetComponent<Rigidbody>();
@@ -18,14 +22,19 @@ public class ClasePractica4s : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        AplicarGravedad(gravedad, Objetin);
         if (Input.GetKey(KeyCode.Space))
         {
             AplicarFuerza(Fuerza);
         }
 
     }
+    public void AplicarGravedad(float Gravedad,Rigidbody objetogravedad)
+    {
+        Gravedad = gravedad;
+        objetogravedad.AddForce(transform.up * gravedad, ForceMode.Force);
 
+    }
     public void AplicarFuerza(float fuerza)
     {
         fuerza = Fuerza;
