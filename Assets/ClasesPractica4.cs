@@ -20,19 +20,29 @@ public class ClasesPractica4 : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         AplicarGravedad(gravedad, Objetin);
         if (Input.GetKey(KeyCode.Space))
         {
+            agregarPeso(8, gravedad);
             AplicarFuerza(Fuerza);
         }
+
+    }
+
+    void agregarPeso(float masa, float aceleracion)
+    {
+        float peso=masa*aceleracion;
+
+        Debug.Log(peso);
+
 
     }
     public void AplicarGravedad(float Gravedad,Rigidbody objetogravedad)
     {
         Gravedad = gravedad;
-        objetogravedad.AddForce(transform.up * gravedad, ForceMode.Force);
+        objetogravedad.AddForce(transform.up * gravedad, ForceMode.Acceleration);
 
     }
     public void AplicarFuerza(float fuerza)
