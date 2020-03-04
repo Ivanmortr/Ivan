@@ -38,7 +38,7 @@ public class TareaParabolic: MonoBehaviour
         // Gira para apuntar la siguiente posición y luego muévete allí
         transform.rotation = LookAt2D(nextPos - transform.position);
         transform.position = nextPos;
-        Debug.Log(nextPos.x);
+        
 
         // Haz algo cuando se llega a la posicion
         if (nextPos == targetPos) Arrived();
