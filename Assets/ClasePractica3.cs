@@ -30,7 +30,7 @@ public class ClasePractica3 : MonoBehaviour
     {
         fuerza = Fuerza;
 
-        Objetin.AddForce(transform.up * fuerza, ForceMode.Force);
+        Objetin.AddForce(transform.right * fuerza, ForceMode.Force);
 
         float trabajo = fuerza * 12;
 
