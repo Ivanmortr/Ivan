@@ -6,15 +6,19 @@ using UnityEngine.UI;
 public class Practica2 : MonoBehaviour
 {
     public GameObject Esferita;
-    int FIzq;
-    int FDer;
-    int FF;
-    [SerializeField]
-    Text fuerza1, fuerza2;
+    
+    float FF;
+    float FuerzaIzq;
+    float FuerzaDer;
+    Rigidbody rb;
+    public Text FuerzaIzqT;
+    public Text FuerzaDerT;
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = Esferita.GetComponent<Rigidbody>();
+        FuerzaIzqT.text = "";
+        FuerzaDerT.text = "";
     }
 
     // Update is called once per frame
@@ -22,19 +26,23 @@ public class Practica2 : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            FIzq += 1;
+            FF -= 0.01f;
+            FuerzaIzq -= 0.01f;
+            
+          
         }
         if (Input.GetMouseButtonDown(1))
         {
-            FDer += 1;
+            FF += 0.01f;
+            FuerzaDer += 0.01f;
+          
         }
-        FF = FDer - FIzq;
-
-        int FIzq2 = FIzq - FDer;
-        int FDer2 = FDer - FIzq;
-        Esferita.transform.position =new Vector3 (FF, 0, 0);
-        fuerza1.text ="Fuerza izq " + FIzq2;
-        fuerza2.text = "Fuerza der " + FDer2;
-
+        
+        rb.AddForce(new Vector3(FF, 0, 0), ForceMode.VelocityChange);
+        FuerzaDerT.text = "Equipo Derecho: " + FuerzaDer;
+        FuerzaIzqT.text = "Equipo Izquierdo: " + FuerzaIzq;
+        
     }
+
+
 }
