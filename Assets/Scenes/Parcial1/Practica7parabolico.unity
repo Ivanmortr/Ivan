@@ -1237,8 +1237,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568dbc32d5584904ca5dc02ce895d9e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  arcHeight: 16.19
+  targetPos: {x: 32.6, y: 0, z: 0}
+  speed: 11.84
+  arcHeight: 3.9
 --- !u!1 &1142896263
 GameObject:
   m_ObjectHideFlags: 0
