@@ -21,6 +21,7 @@ public class tiroparabolico : MonoBehaviour
         if(Input.GetKey(KeyCode.Space))
         {
             KV += Time.deltaTime * multiplicador;
+            Debug.Log("Fuerza " + KV);
         }
         if(Input.GetKeyUp(KeyCode.Space))
         {
