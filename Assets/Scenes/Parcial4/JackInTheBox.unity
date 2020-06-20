@@ -598,7 +598,7 @@ GameObject:
   - component: {fileID: 1189530363}
   - component: {fileID: 1189530367}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Spring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -674,7 +674,7 @@ Transform:
   m_GameObject: {fileID: 1189530362}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.004000002, y: -0.7499832, z: 0.011999965}
-  m_LocalScale: {x: 0.42084748, y: 0.78261364, z: 0.4208475}
+  m_LocalScale: {x: 0.42084748, y: -0.7826136, z: 0.4208475}
   m_Children:
   - {fileID: 2038350926}
   m_Father: {fileID: 1745947860}
@@ -1002,7 +1002,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1745947858}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b87cb7224a6ed314eba05633d4d87d51, type: 3}
+  m_Script: {fileID: 11500000, guid: a9960ac20e15f5f41acf419215379cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   k: 20
@@ -1015,6 +1015,7 @@ MonoBehaviour:
   dampening: 0
   acc: 0
   spring: {fileID: 1189530366}
+  hijo: {fileID: 2038350926}
 --- !u!4 &1745947860
 Transform:
   m_ObjectHideFlags: 0
@@ -1344,7 +1345,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2038350925}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.55, z: -0.023761516}
+  m_LocalPosition: {x: 0, y: 4, z: -0.023761516}
   m_LocalScale: {x: 2.3761578, y: 2.3098974, z: 2.3761575}
   m_Children: []
   m_Father: {fileID: 1189530366}
